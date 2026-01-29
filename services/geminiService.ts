@@ -2,7 +2,10 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { TelegramGroup, GeminiInsight } from "../types.ts";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({
+  apiKey: process.env.GEMINI_API_KEY
+});
+
 
 export async function getGroupInsights(group: TelegramGroup): Promise<GeminiInsight> {
   const prompt = `Analyze this Telegram group and provide administrative insights:
