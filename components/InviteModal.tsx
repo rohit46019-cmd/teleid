@@ -19,7 +19,7 @@ const InviteModal: React.FC<InviteModalProps> = ({ group, onClose, botToken }) =
   const [error, setError] = useState<string | null>(null);
   
   const [useLimit] = useState(1);
-  const [expiration] = useState('0'); 
+  const [expiration] = useState('1440'); 
 
   useEffect(() => {
     if (botToken && group) {
